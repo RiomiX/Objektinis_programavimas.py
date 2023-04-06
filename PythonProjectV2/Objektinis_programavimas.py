@@ -287,39 +287,39 @@
 
 class Irasas:  # klasę Irasas, kuri turėtų argumentus tipas (Pajamos arba Išlaidos) ir suma. Galima prirašyti str metodą, kuris gražintų, kaip bus atvaizduojamas spausdinamas objektas.
 
-    def __init__(self, pajamos, suma):
-        self.pajamos = pajamos
+    def __init__(self, tipas, suma):
+        self.tipas = tipas
         self.suma = suma
 
     def __str__(self):
-        return f'{self. pajamos}: {self.suma()}'
+        return f'{self.tipas}: {self.suma}'
 
 
-class Biudzetas(Irasas):
+class Biudzetas:
 
     def __init__(self):   # kuriame sukurtas tuščias sąrašas zurnalas, į kurį bus dedami sukurti pajamų ir išlaidų objektai
         self.zurnalas = []
 
-    def prideti_pajamu_irasa(self):   # kuris priimtų paduotą sumą, sukurtų pajamų objektą ir įdėtų jį į biudžeto žurnalą
+    def prideti_pajamu_irasa(self, suma):   # kuris priimtų paduotą sumą, sukurtų pajamų objektą ir įdėtų jį į biudžeto žurnalą
         pajamos = Irasas('Pajamos', suma)
         self.zurnalas.append(pajamos)
 
-    def prideti_islaidu_irasa(self):  # kuris priimtų paduotą sumą, sukurtų išlaidų objektą ir įdėtų jį į biudžeto žurnalą
+    def prideti_islaidu_irasa(self, suma):  # kuris priimtų paduotą sumą, sukurtų išlaidų objektą ir įdėtų jį į biudžeto žurnalą
         islaidos = Irasas('Islaidos', suma)
         self.zurnalas.append(islaidos)
 
     def gauti_balansą(self):    # kuris gražintų žurnale laikomų pajamų ir išlaidų balansą
         suma = 0
-        for i in self.zurnalas:
-            suma += i
-        print(f'Pajamu balansas {suma}')
-        for i in self.zurnalas:
-            suma -= i
-        print(f'Islaidu balansas {suma}')
+        for irasas in self.zurnalas:
+            if irasas.tipas == 'Pajamos':
+                suma += irasas.suma
+            if irasas.tipas == 'Islaidos':
+                suma -= irasas.suma
+        print('Balansas', suma)
 
     def parodyti_ataskaita(self):   # kuris atspausdintų visus pajamų ir išlaidų įrašus (nurodydamas kiekvieno įrašo tipą ir sumą).
         for i in self.zurnalas:
-             print(self.zurnalas)
+             print(i)
 
 
 biudzetas = Biudzetas()
@@ -336,25 +336,17 @@ while True:
     var = int(input('Jusu pasirinkimas: '))
     match var:
         case 1:
-            suma = input('Gauta suma: ')
-            Biudzetas.prideti_pajamu_irasa(suma)
+            # tipas = input('Kokios pajamos: ')
+            suma = float(input('Pajamu suma: '))
+            biudzetas.prideti_pajamu_irasa(suma)
         case 2:
-            suma = input('Gautos islaido: ')
-            Biudzetas.prideti_islaidu_irasa(suma)
+            # tipas = input('Kokios islaidos: ')
+            suma = float(input('Gautos islaido: '))
+            biudzetas.prideti_islaidu_irasa(suma)
         case 3:
-            print('Pajamu ir islaidu balansas')
-            if len(Biudzetas.prideti_pajamu_irasa(zurnalas)) != 0:
-                for i in Biudzetas.prideti_pajamu_irasa():
-                    s += i
-                print(f'Pajamu suma {s}')
-            if len(Biudzetas.prideti_islaidu_irasa(zurnalas)) != 0:
-                for p in Biudzetas.prideti_islaidu_irasa():
-                    s += p
-                    print(f'Islaidu suma {s}')
+            biudzetas.gauti_balansą()
         case 4:
             print('Biudžeto ataskaitą (visus pajamų ir išlaidų įrašus su sumomis')
-            for i in zurnalas:
-                for n in i:
-                    print(n)
+            biudzetas.parodyti_ataskaita()
         case 5:
             break

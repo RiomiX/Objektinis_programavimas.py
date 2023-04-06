@@ -1,10 +1,9 @@
 def bandom(args):
     import random
     bingo = 0
-    vm = int(args[0])
+    vm = mas1[0]
     while bingo == 0:
         mas = []
-        # mas2 = []
         n = 0
         s = 0
         mas.append(vm)

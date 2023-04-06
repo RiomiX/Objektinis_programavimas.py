@@ -1,40 +1,59 @@
 import random
 import time
 
+
 def spausdinam(lenta):
-    for i in lenta:
-        print(i)
+    for ii in lenta:
+        print(ii)
+
 
 def tiktinam():
     '''tikrinu horizontaliai'''
-    if 'X' == str(xo[0][0]) and 'X' == str(xo[0][1]) and 'X' == str(xo[0][2]): return print('>>>>>> X laimejo <<<<<<'), exit()
-    if 'X' == str(xo[1][0]) and 'X' == str(xo[1][1]) and 'X' == str(xo[1][2]): return print('>>>>>> X laimejo <<<<<<'), exit()
-    if 'X' == str(xo[2][0]) and 'X' == str(xo[2][1]) and 'X' == str(xo[2][2]): return print('>>>>>> X laimejo <<<<<<'), exit()
+    if 'X' == str(xo[0][0]) and 'X' == str(xo[0][1]) and 'X' == str(xo[0][2]):
+        return print('>>>>>> X laimejo <<<<<<'), exit(time.sleep(2))
+    if 'X' == str(xo[1][0]) and 'X' == str(xo[1][1]) and 'X' == str(xo[1][2]):
+        return print('>>>>>> X laimejo <<<<<<'), exit(time.sleep(2))
+    if 'X' == str(xo[2][0]) and 'X' == str(xo[2][1]) and 'X' == str(xo[2][2]):
+        return print('>>>>>> X laimejo <<<<<<'), exit(time.sleep(2))
     '''tikrinu vertikaliai'''
-    if 'X' == str(xo[0][0]) and 'X' == str(xo[1][0]) and 'X' == str(xo[2][0]): return print('>>>>>> X laimejo <<<<<<'), exit()
-    if 'X' == str(xo[0][1]) and 'X' == str(xo[1][1]) and 'X' == str(xo[2][1]): return print('>>>>>> X laimejo <<<<<<'), exit()
-    if 'X' == str(xo[0][2]) and 'X' == str(xo[1][2]) and 'X' == str(xo[2][2]): return print('>>>>>> X laimejo <<<<<<'), exit()
+    if 'X' == str(xo[0][0]) and 'X' == str(xo[1][0]) and 'X' == str(xo[2][0]):
+        return print('>>>>>> X laimejo <<<<<<'), exit(time.sleep(2))
+    if 'X' == str(xo[0][1]) and 'X' == str(xo[1][1]) and 'X' == str(xo[2][1]):
+        return print('>>>>>> X laimejo <<<<<<'), exit(time.sleep(2))
+    if 'X' == str(xo[0][2]) and 'X' == str(xo[1][2]) and 'X' == str(xo[2][2]):
+        return print('>>>>>> X laimejo <<<<<<'), exit(time.sleep(2))
     '''tikrinu kryzmai'''
-    if 'X' == str(xo[0][0]) and 'X' == str(xo[1][1]) and 'X' == str(xo[2][2]): return print('>>>>>> X laimejo <<<<<<'), exit()
-    if 'X' == str(xo[2][0]) and 'X' == str(xo[1][1]) and 'X' == str(xo[0][2]): return print('>>>>>> X laimejo <<<<<<'), exit()
+    if 'X' == str(xo[0][0]) and 'X' == str(xo[1][1]) and 'X' == str(xo[2][2]):
+        return print('>>>>>> X laimejo <<<<<<'), exit(time.sleep(2))
+    if 'X' == str(xo[2][0]) and 'X' == str(xo[1][1]) and 'X' == str(xo[0][2]):
+        return print('>>>>>> X laimejo <<<<<<'), exit(time.sleep(2))
     '''ta pati tik su O'''
     '''tikrinu horizontaliai'''
-    if 'O' == str(xo[0][0]) and 'O' == str(xo[0][1]) and 'O' == str(xo[0][2]): return print('>>>>>> O laimejo <<<<<<'), exit()
-    if 'O' == str(xo[1][0]) and 'O' == str(xo[1][1]) and 'O' == str(xo[1][2]): return print('>>>>>> O laimejo <<<<<<'), exit()
-    if 'O' == str(xo[2][0]) and 'O' == str(xo[2][1]) and 'O' == str(xo[2][2]): return print('>>>>>> O laimejo <<<<<<'), exit()
+    if 'O' == str(xo[0][0]) and 'O' == str(xo[0][1]) and 'O' == str(xo[0][2]):
+        return print('>>>>>> O laimejo <<<<<<'), exit(time.sleep(2))
+    if 'O' == str(xo[1][0]) and 'O' == str(xo[1][1]) and 'O' == str(xo[1][2]):
+        return print('>>>>>> O laimejo <<<<<<'), exit(time.sleep(2))
+    if 'O' == str(xo[2][0]) and 'O' == str(xo[2][1]) and 'O' == str(xo[2][2]):
+        return print('>>>>>> O laimejo <<<<<<'), exit(time.sleep(2))
     '''tikrinu vertikaliai'''
-    if 'O' == str(xo[0][0]) and 'O' == str(xo[1][0]) and 'O' == str(xo[2][0]): return print('>>>>>> O laimejo <<<<<<'), exit()
-    if 'O' == str(xo[0][1]) and 'O' == str(xo[1][1]) and 'O' == str(xo[2][1]): return print('>>>>>> O laimejo <<<<<<'), exit()
-    if 'O' == str(xo[0][2]) and 'O' == str(xo[1][2]) and 'O' == str(xo[2][2]): return print('>>>>>> O laimejo <<<<<<'), exit()
+    if 'O' == str(xo[0][0]) and 'O' == str(xo[1][0]) and 'O' == str(xo[2][0]):
+        return print('>>>>>> O laimejo <<<<<<'), exit(time.sleep(2))
+    if 'O' == str(xo[0][1]) and 'O' == str(xo[1][1]) and 'O' == str(xo[2][1]):
+        return print('>>>>>> O laimejo <<<<<<'), exit(time.sleep(2))
+    if 'O' == str(xo[0][2]) and 'O' == str(xo[1][2]) and 'O' == str(xo[2][2]):
+        return print('>>>>>> O laimejo <<<<<<'), exit(time.sleep(2))
     '''tikrinu kryzmai'''
-    if 'O' == str(xo[0][0]) and 'O' == str(xo[1][1]) and 'O' == str(xo[2][2]): return print('>>>>>> O laimejo <<<<<<'), exit()
-    if 'O' == str(xo[2][0]) and 'O' == str(xo[1][1]) and 'O' == str(xo[0][2]): return print('>>>>>> O laimejo <<<<<<'), exit()
+    if 'O' == str(xo[0][0]) and 'O' == str(xo[1][1]) and 'O' == str(xo[2][2]):
+        return print('>>>>>> O laimejo <<<<<<'), exit(time.sleep(2))
+    if 'O' == str(xo[2][0]) and 'O' == str(xo[1][1]) and 'O' == str(xo[0][2]):
+        return print('>>>>>> O laimejo <<<<<<'), exit(time.sleep(2))
 
 
 print('Pradeti zaidima 1')
 print('Iseiti__________2')
 var = int(input('Juru pasirinkimas: '))
 p = 0
+xo = []
 
 if var == 1:
     xo = [['1', '2', '3'],
@@ -66,6 +85,7 @@ match var:
                     x = int(input('Kuri skaiciu pakeisti O-u: '))
                 except:
                     print('Netinkamas simbolis')
+                    time.sleep(2)
                     break
                 for i in range(len(xo)):
                     p = 0

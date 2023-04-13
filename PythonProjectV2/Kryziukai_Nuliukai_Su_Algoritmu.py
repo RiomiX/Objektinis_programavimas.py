@@ -1,3 +1,13 @@
+'''
+Cia aprasyta kas veikia siame kode
+Zaidzia Algoritmas pries Vartotoja
+Teisingai fiksuoja žaidėjo laimėjimą ir stabdo žaidimą
+Žaidimas vyksta konsolėje
+Sukurtą žaidimą paskelbti github repozitorijoje, nuorodą paskelbti teamsuose, tam skirtoje užduotyje (Assignments)
+Kad baigus žaidimą, programa neišsijungtų, o leistų pakartoti žaidimą. Taip pat būtų galimybė išjungti programą
+Kad žaidimas skaičiuotų abiejų žaidėjų sesijos laimėjimus.
+Leistų žaisti prieš kompiuterį (sukurti logiką, kaip jis elgsis)
+'''
 import random
 import time
 

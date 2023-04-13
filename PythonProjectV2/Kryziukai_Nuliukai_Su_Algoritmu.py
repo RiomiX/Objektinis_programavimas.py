@@ -276,16 +276,19 @@ def tikrinu_ivedima():
     ieskom = 0
     while True:
         x = input('Kuri skaiciu pakeisti O-u: ')
+        print()
         if x.isdigit():
             x = int(x)
             if 0 < x < 10:
                 break
             else:
                 print('Netinkamas skaicius')
+                print()
                 time.sleep(2)
                 spausdinam(xo)
         else:
             print('Ivestas netinkamas simbolis')
+            print()
             time.sleep(2)
             spausdinam(xo)
     while ieskom == 0:
@@ -299,6 +302,7 @@ def tikrinu_ivedima():
                     p += 1
         if ieskom != 1:
             print('Langelis uzimtas, pasirinkite kita')
+            print()
             x = input('Kuri skaiciu pakeisti O-u: ')
             print()
     for i in range(len(xo)):
@@ -307,7 +311,6 @@ def tikrinu_ivedima():
             if s == str(x):
                 xo[i][p] = 'O'
                 p = 0
-                break
             else:
                 p += 1
 
@@ -359,6 +362,7 @@ def gameover():
             return 8
         case 2:
             rezultatas()
+            print('Laimingai !')
             exit()
 
 

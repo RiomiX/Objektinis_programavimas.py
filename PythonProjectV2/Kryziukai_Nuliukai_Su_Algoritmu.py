@@ -368,7 +368,6 @@ print('Iseiti__________2')
 var = int(input('Juru pasirinkimas: '))
 p = 0
 kartai = 0
-o = 0
 sumx = 0
 sumo = 0
 xo = [['1', '2', '3'],

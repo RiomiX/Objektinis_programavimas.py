@@ -303,6 +303,8 @@ def tikrinu_ivedima():
         if ieskom != 1:
             print('Langelis uzimtas, pasirinkite kita')
             print()
+            time.sleep(1)
+            spausdinam(xo)
             x = input('Kuri skaiciu pakeisti O-u: ')
             print()
     for i in range(len(xo)):
